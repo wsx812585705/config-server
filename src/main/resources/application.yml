@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.tenxcloud.com/wangshixiong/brave-demo.git
+          searchPaths: /src/main/resources/
+          username: wangshixiong
+          password: wsx7187144641wsx
+          default-label: master
+          access-token: 1UzkvVpWq6CW1FbXoRL4
+          clone-on-start: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
